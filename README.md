@@ -10,6 +10,8 @@
 
 [Trello](https://trello.com/b/heGMt9ei/song-playlist-maker)
 
+[LucidChart (ERD and Component Hierachy Diagram)](https://lucid.app/lucidchart/ba7c52a9-3525-409f-b9f4-a329d25ff405/edit?beaconFlowId=AE37333C3217E2DD&page=0_0#)
+
 ---
 
 **_Description_**
