@@ -19,7 +19,7 @@
 A simple playlist tool that will let you create playlist based on what songs you enter!
 
 Interested in a new genre of music? You can press whatever genere you are interested in and it will
-display a few albums/songs to get started with..
+display a few albums/songs to get started with.
 
 ---
 
