@@ -1,6 +1,14 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const UserSchema = require('./user.js')
+const PlaylistSchema = require('./playlist.js')
+const SongSchema = require('./user.js')
+
+const User = mongoose.model('users', UserSchema)
+const Playlist = mongoose.model('playlists', PlaylistSchema)
+const Song = mongoose.model('users', SongSchema)
 
 module.exports = {
-  // Export Models Here
+  User,
+  Playlist,
+  Song
 }

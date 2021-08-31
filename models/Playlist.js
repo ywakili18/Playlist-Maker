@@ -8,4 +8,4 @@ const Playlist = new Schema(
   { timestamps: true }
 )
 
-module.exports = User
+module.exports = Playlist
