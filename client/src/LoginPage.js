@@ -15,17 +15,6 @@ const LoginPage = () => {
         }}
         value={userName}
       ></input>
-      <br />
-      <br />
-      <label>Password: </label>
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) => {
-          setPassword(e.target.value)
-        }}
-        value={password}
-      ></input>
     </form>
   )
 }
