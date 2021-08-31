@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-// Set Up Models Here
+const Schema = mongoose.Schema
 
 module.exports = {
   // Export Models Here
