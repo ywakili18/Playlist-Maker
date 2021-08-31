@@ -4,5 +4,6 @@ const AppRouter = Router()
 const controller = require('../controllers/Controller.js')
 //create get, post, delete request here
 AppRouter.get('/getexamplerouter', controller.GetExample)
+AppRouter.post('/postexamplerouter', controller.PostExample)
 
 module.exports = AppRouter

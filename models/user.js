@@ -3,7 +3,7 @@ const { Schema } = require('mongoose')
 const User = new Schema(
   {
     userName: { type: String, required: true },
-    password: { type: String, required: true }
+    playLists: [{ type: Schema.Types.ObjectId, ref: 'playLists' }]
   },
   { timestamps: true }
 )
