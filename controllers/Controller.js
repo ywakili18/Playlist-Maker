@@ -1,7 +1,7 @@
 // Reqiure Models Here
-
+// logic for your routes go here
 const GetExample = async (req, res) => {
-  res.send({ msg: `${req.method} Example` })
+  res.send({ msg: `This is a ${req.method} Example` })
 }
 const PostExample = async (req, res) => {
   res.send({ msg: `${req.method} Example`, data: req.body || [] })
