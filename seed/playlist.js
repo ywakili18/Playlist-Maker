@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Playlist, Song } = require('../models')
+const { Playlist } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -7,7 +7,7 @@ const main = async () => {
   // rap playlist
   const rap = await Playlist.find({ name: 'Rap' })
   //80s playlist
-  const eighties = await Publisher.find({ name: '80s' })
+  const eighties = await Playlist.find({ name: '80s' })
 
   const songs = [
     {
@@ -19,7 +19,7 @@ const main = async () => {
         'Ms.Jackson',
         'Shook Ones, Part II'
       ],
-      publisher_id: rap[0]._id
+      playlist_id: rap[0]._id
     },
     {
       // 80s tracks
@@ -30,7 +30,7 @@ const main = async () => {
         'Billie Jean',
         'I Cant Go for That (No Can Do)'
       ],
-      publisher_id: eighties[0]._id
+      playlist_id: eighties[0]._id
     }
   ]
 

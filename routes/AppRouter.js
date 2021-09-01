@@ -6,7 +6,6 @@ const controller = require('../controllers/Controller.js')
 // post request to create username data
 AppRouter.post('/users', controller.createUser)
 
-// post request to show playlist genre of music
-// AppRouter.post('/playlist', controller.createRapPlaylist)
-
+// get request for username
+AppRouter.get('/users/:userName', controller.userByName)
 module.exports = AppRouter
