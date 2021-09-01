@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 const LoginPage = () => {
   const [userName, setUsername] = useState('')
-  const [password, setPassword] = useState('')
 
   return (
     <form>
