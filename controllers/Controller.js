@@ -23,7 +23,7 @@ const userByName = async (req, res) => {
     console.log(userName)
     const userByName = await User.find({ userName: userName })
     if (userByName) {
-      return res.status(200).json({ userName })
+      return res.status(200).json({ userByName })
     }
     return res.status(404).send('User with the specified ID does not exists')
   } catch (error) {
@@ -36,11 +36,13 @@ const createPlaylist = async (req, res) => {
   try {
     const attachedUser = await User.findOne({ userName: req.params.userName })
     const newPlayList = await Playlist.create(req.body)
-    let newLists = { ...attachedUser.playLists, newPlayList }
-    attachedUser.update({ playLists: newLists })
+    let newLists = [...attachedUser.playLists, ...[newPlayList.id]]
+    attachedUser.set({ playLists: newLists })
+    await attachedUser.save()
+    console.log(attachedUser, 'this is log of attacheduser')
 
     return res.status(201).json({
-      newTaskList
+      newPlayList
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })

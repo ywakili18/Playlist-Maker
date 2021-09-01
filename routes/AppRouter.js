@@ -9,7 +9,7 @@ AppRouter.post('/users', controller.createUser)
 AppRouter.get('/users/:userName', controller.userByName)
 
 //post request to create playlist data
-AppRouter.post('users/:userName/playLists', controller.createPlaylist)
+AppRouter.post('/users/:userName/playLists', controller.createPlaylist)
 
 // get request to get playlist by id
 AppRouter.get('/users/:userName/playLists/:id', controller.getPlaylistById)
