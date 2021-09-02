@@ -1,7 +1,7 @@
 import React from 'react'
 import PlaylistName from '../components/PlaylistName'
 
-const LoginPage = () => {
+const Home = () => {
   return <PlaylistName />
 }
-export default PlaylistName
+export default Home
