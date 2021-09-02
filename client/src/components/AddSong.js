@@ -1,27 +1,16 @@
-import React, { useState } from 'react'
-import Playlist from './Playlist'
-const AddSong = () => {
-  const [song, setSong] = useState([''])
+import React from 'react'
+// song component to add song
+const AddSong = (props) => {
   return (
     <div>
-      <div id="formId">
-        <form>
-          <input
-            type="text"
-            placeholder="Add Song"
-            onChange={(e) => {
-              setSong(e.target.value)
-            }}
-            value={song}
-          ></input>
-          <button>+</button>
-          <br />
-        </form>
-      </div>
-
-      <div className="songListContainer">
-        <Playlist />
-      </div>
+      <label>Add Song</label>
+      <input
+        type="text"
+        name="songs"
+        onChange={props.handleChange}
+        value={props.value}
+      />
+      <button onClick={props.addSong}>+</button>
     </div>
   )
 }

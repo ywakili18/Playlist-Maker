@@ -1,16 +1,10 @@
 import React from 'react'
-import PlaylistName from '../components/PlaylistName'
-import AddSong from '../components/AddSong'
-
+import Playlist from '../components/Playlist'
+// page imports playListname container and Add song input component
 const Home = () => {
   return (
     <div>
-      <div className="playListNameContainer">
-        <PlaylistName />
-      </div>
-      <div className="addSongListContainer">
-        <AddSong songs={[]} />
-      </div>
+      <Playlist />
     </div>
   )
 }
