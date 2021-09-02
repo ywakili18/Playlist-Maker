@@ -5,3 +5,10 @@ body {
   border: solid black 1px;
   text-align: center;
 }
+#formId {
+  text-align: center;
+}
+.songListContainer {
+  border: solid black 1px;
+  text-align: center;
+}
