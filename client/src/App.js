@@ -1,13 +1,15 @@
 import React from 'react'
 import './App.css'
-import LoginPage from './LoginPage'
-import axios from 'axios'
-import { BASE_URL } from '../globals'
+import LoginPage from './pages/LoginPage'
+import Home from './pages/Home'
 
 function App() {
   return (
     <div>
+      {/* user name component which has username login */}
       <LoginPage />
+      {/* user component  */}
+      <Home />
     </div>
   )
 }

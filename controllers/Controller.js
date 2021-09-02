@@ -39,7 +39,6 @@ const createPlaylist = async (req, res) => {
     let newLists = [...attachedUser.playLists, ...[newPlayList.id]]
     attachedUser.set({ playLists: newLists })
     await attachedUser.save()
-    console.log(attachedUser, 'this is log of attacheduser')
 
     return res.status(201).json({
       newPlayList
@@ -48,25 +47,39 @@ const createPlaylist = async (req, res) => {
     return res.status(500).json({ error: error.message })
   }
 }
+// const createSong = async (req, res) => {
+//   try {
+//     const attachedPlaylist = await Playlist.findOne({
+//       playlist_name: req.params.playlist_name
+//     })
+//     const newSongName = await Song.create(req.body)
+//     let newSonglist = [...attachedPlaylist.song, ...[newSongName.id]]
+//     attachedPlaylist.set({ song: newSonglist })
+//     await attachedPlaylist.save()
 
-// getting playlist by id
-const getPlaylistById = async (req, res) => {
+//     return res.status(201).json({
+//       newSonglist
+//     })
+//   } catch (error) {
+//     return res.status(500).json({ error: error.message })
+//   }
+// }
+const createSong = async (req, res) => {
   try {
-    const { id } = req.params
-    const playList = await Playlist.findById(id)
-    if (playList) {
-      return res.status(200).json({ playList })
+    const newSong = await Song.create(req.body.song_name)
+    await newSong.save()
+    if (newSong) {
+      return res.status(200).json({ newSong })
     }
-    return res
-      .status(404)
-      .send('Play list with the specified ID does not exists')
+    return res.status(404).send('User not created')
   } catch (error) {
     return res.status(500).send(error.message)
   }
 }
+//controller for creating
 module.exports = {
   createUser,
   userByName,
   createPlaylist,
-  getPlaylistById
+  createSong
 }

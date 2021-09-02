@@ -1,0 +1,7 @@
+body {
+  background-color: rgb(97, 23, 23);
+}
+.playListName {
+  border: solid black 1px;
+  text-align: center;
+}
