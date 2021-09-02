@@ -6,7 +6,7 @@ const AddSong = (props) => {
       <label>Add Song</label>
       <input
         type="text"
-        name="songs"
+        name="song"
         onChange={props.handleChange}
         value={props.value}
       />
