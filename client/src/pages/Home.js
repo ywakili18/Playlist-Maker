@@ -8,7 +8,6 @@ const Home = (props) => {
       <div className="socialMediaIconsContainer">
         <NavBar />
       </div>
-
       <div>
         <Playlist />
       </div>

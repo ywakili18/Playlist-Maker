@@ -24,7 +24,7 @@ const UserName = (props) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <h2>Playlist Maker</h2>
+      <h3>Enter username</h3>
       <input
         type="text"
         placeholder="Username"
