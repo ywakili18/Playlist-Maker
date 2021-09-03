@@ -25,10 +25,9 @@ const UserName = (props) => {
   return (
     <form onSubmit={onSubmit}>
       <h2>Playlist Maker</h2>
-      <label>Username:</label>
       <input
         type="text"
-        placeholder="Enter user name here"
+        placeholder="Username"
         onChange={(e) => {
           setUser(e.target.value)
         }}

@@ -4,7 +4,10 @@ import NavBar from '../components/NavBar'
 const LoginPage = () => {
   return (
     <div>
-      <NavBar />
+      <div className="socialMediaIconsContainer">
+        <NavBar />
+      </div>
+
       <div>
         <UserName />
       </div>
