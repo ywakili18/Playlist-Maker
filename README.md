@@ -25,14 +25,14 @@ display a few albums/songs to get started with.
 
 **MVP/Project Requirements**
 
-- [ ] Creating new Repo in GitHub
-- [ ] Have a separate directory for the frontend (client) and have your backend within the main repository.
-- [ ] Utlize flexbox or grid
-- [ ] Include a minimum of 2 Mongoose Schemas (models)
+- [x] Creating new Repo in GitHub
+- [x] Have a separate directory for the frontend (client) and have your backend within the main repository.
+- [x] Utlize flexbox or grid
+- [x] Include a minimum of 2 Mongoose Schemas (models)
 - [ ] Have (POST, GET, DELETE) operations
 - [ ] Display data from each model on the frontend (unless given an exemption on one by an Instructor)
-- [ ] Must be able to navigate between different pages (React Router)
-- [ ] Have at least 40 meaningful git commits. You should be committing your changes every time you build a new feature.
+- [x] Must be able to navigate between different pages (React Router)
+- [x] Have at least 40 meaningful git commits. You should be committing your changes every time you build a new feature.
 - [ ] Deploy on Heroku
 
 ---
@@ -41,6 +41,7 @@ display a few albums/songs to get started with.
 
 - [Add api to generate list of songs]
 - [Add username and password authenticator]
+- [Add genre playlist generator]
 
 ---
 
@@ -52,6 +53,12 @@ display a few albums/songs to get started with.
   - ReactJS
   - NodeJS
 - Deployed using Heroku
+
+---
+
+**Screenshots**
+![Page1](https://i.ibb.co/8NgFy4J/screenshot2.png)
+![Page2](https://i.ibb.co/6HDjHFK/screenshot1.png)
 
 ---
 

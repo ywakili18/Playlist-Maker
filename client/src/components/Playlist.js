@@ -25,7 +25,7 @@ const Playlist = (props) => {
   }
   return (
     <div id="playlist">
-      <h2 id="playListName"> {`${userName} playlist`}</h2>
+      <h3 id="playListName"> {`${userName} playlist`}</h3>
       <div id="songTaskContainer">
         <AddSong handleChange={handleChange} addSong={addSong} value={input} />
         <RemoveSong songs={songs} removeSong={removeSong} />
