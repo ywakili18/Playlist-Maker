@@ -4,6 +4,7 @@ const { User, Playlist, Song } = require('../models/index')
 
 //controller for creating username post data
 const createUser = async (req, res) => {
+  console.log(req.body)
   try {
     const newUser = await User.create(req.body)
     await newUser.save()
@@ -18,6 +19,7 @@ const createUser = async (req, res) => {
 
 // controller for getting username by user name
 const userByName = async (req, res) => {
+  console.log(req.body)
   try {
     const { userName } = req.params
     console.log(userName)
@@ -33,6 +35,7 @@ const userByName = async (req, res) => {
 
 // controller for creating playlist post data
 const createPlaylist = async (req, res) => {
+  console.log(req.body)
   try {
     const attachedUser = await User.findOne({ userName: req.params.userName })
     const newPlayList = await Playlist.create(req.body)
@@ -65,6 +68,7 @@ const createPlaylist = async (req, res) => {
 //   }
 // }
 const createSong = async (req, res) => {
+  console.log(req.body)
   try {
     const newSong = await Song.create(req.body.song_name)
     await newSong.save()
