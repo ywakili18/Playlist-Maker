@@ -1,8 +1,10 @@
 const { Schema } = require('mongoose')
+const Playlist = require('./playlist')
 
 const Song = new Schema(
   {
-    song_name: { type: String, required: true }
+    songName: { type: String, required: true },
+    userName: { type: Schema.Types.ObjectId, ref: 'User' }
   },
   { timestamps: true }
 )

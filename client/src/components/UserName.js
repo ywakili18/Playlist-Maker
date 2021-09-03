@@ -18,7 +18,8 @@ const UserName = (props) => {
   const onSubmit = (e) => {
     e.preventDefault()
     const newUser = { userName: user }
-    axios.post(`${BASE_URL}`, user)
+    console.log(newUser)
+    axios.post(`${BASE_URL}/users`, newUser)
     history.push('/home', { userName: user })
   }
 

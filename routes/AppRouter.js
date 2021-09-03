@@ -4,14 +4,16 @@ const AppRouter = Router()
 const controller = require('../controllers/Controller.js')
 
 // post request to create username data
-AppRouter.post('/', controller.createUser)
+AppRouter.post('/users', controller.createUser)
 // get request for username
-AppRouter.get('/:userName', controller.userByName)
+AppRouter.get('/users/:userName', controller.userByName)
 
 //post request to create playlist data
 AppRouter.post('/users/:userName/playLists', controller.createPlaylist)
 
 // post  request to get create song data by id
-AppRouter.post('/users/songs', controller.createSong)
+AppRouter.post('/songs', controller.createSong)
+
+AppRouter.get('/songs', controller.getAllSongs)
 
 module.exports = AppRouter

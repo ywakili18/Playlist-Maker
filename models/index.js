@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const UserSchema = require('./user.js')
 const PlaylistSchema = require('./playlist.js')
-const SongSchema = require('./user.js')
+const SongSchema = require('./song.js')
 
 const User = mongoose.model('users', UserSchema)
 const Playlist = mongoose.model('playlists', PlaylistSchema)

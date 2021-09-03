@@ -27,7 +27,7 @@ const userByName = async (req, res) => {
     if (userByName) {
       return res.status(200).json({ userByName })
     }
-    return res.status(404).send('User with the specified ID does not exists')
+    return res.status(404).send('User does not exist')
   } catch (error) {
     return res.status(500).send(error.message)
   }
@@ -70,12 +70,25 @@ const createPlaylist = async (req, res) => {
 const createSong = async (req, res) => {
   console.log(req.body)
   try {
-    const newSong = await Song.create(req.body.song_name)
+    console.log('test this string', req.body)
+    const body = {}
+    const newSong = await Song.create(req.body)
     await newSong.save()
     if (newSong) {
       return res.status(200).json({ newSong })
     }
-    return res.status(404).send('User not created')
+    return res.status(404).send('Song not created')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+const getAllSongs = async (req, res) => {
+  try {
+    const songs = await Song.find()
+    if (songs.length) {
+      return res.status(200).json({ songs })
+    }
+    return res.status(404).send('No songs in this database')
   } catch (error) {
     return res.status(500).send(error.message)
   }
@@ -85,5 +98,6 @@ module.exports = {
   createUser,
   userByName,
   createPlaylist,
-  createSong
+  createSong,
+  getAllSongs
 }

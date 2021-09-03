@@ -17,7 +17,7 @@ const main = async () => {
           genre: 'rap',
           title: 'Flashing Lights',
           genre: 'rap',
-          title: 'It Was a Good Day',
+          title: 'Off the grid',
           genre: 'rap',
           title: 'I Wonder',
           genre: 'rap',
