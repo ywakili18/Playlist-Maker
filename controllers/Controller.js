@@ -1,5 +1,5 @@
 // Reqiure Models Here
-const { User, Playlist, Song } = require('../models/index')
+const { User, Playlist, Song } = require('../models')
 // logic for your routes go here
 
 //controller for creating username post data
