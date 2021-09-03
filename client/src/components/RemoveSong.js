@@ -1,5 +1,5 @@
 import React from 'react'
-const Songs = (props) => {
+const RemoveSong = (props) => {
   return (
     <div>
       <ul>
@@ -12,4 +12,4 @@ const Songs = (props) => {
     </div>
   )
 }
-export default Songs
+export default RemoveSong
