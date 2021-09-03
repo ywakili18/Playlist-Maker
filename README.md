@@ -52,3 +52,11 @@ display a few albums/songs to get started with.
   - ReactJS
   - NodeJS
 - Deployed using Heroku
+
+---
+
+**_Credits_**
+
+[The best way to use icons in React (with React Icons) by Eric Murphy, YouTube](https://www.youtube.com/watch?v=aor9hlcODUE)
+
+[React-Icons](https://react-icons.github.io/react-icons/icons?name=fa)

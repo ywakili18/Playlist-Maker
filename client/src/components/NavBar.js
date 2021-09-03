@@ -1,11 +1,16 @@
-import e from 'cors'
 import React from 'react'
-
+import { IconContext } from 'react-icons'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 const NavBar = () => {
   return (
-    <a href="https://www.linkedin.com/in/yw1818/">
-      <img src="https://bit.ly/3yJq07b" />
-    </a>
+    <IconContext.Provider value={{ size: '2em' }}>
+      <div>
+        <a href="https://www.linkedin.com/in/yw1818/">
+          <FaLinkedin />
+        </a>
+        <FaGithub />
+      </div>
+    </IconContext.Provider>
   )
 }
 
