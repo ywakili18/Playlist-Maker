@@ -26,7 +26,7 @@ const UserName = (props) => {
     <form onSubmit={onSubmit}>
       <h3>Enter username</h3>
       <input
-        type="text"
+        name="function"
         placeholder="Username"
         onChange={(e) => {
           setUser(e.target.value)
