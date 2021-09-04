@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import RemoveSong from './RemoveSong'
 import AddSong from './AddSong'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useHistory } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 
@@ -17,10 +17,11 @@ const Playlist = (props) => {
     manageSongs(myNewPlayList)
   }
 
-  const removeSong = (index) => {
-    let myNewPlayList = [...songs]
-    myNewPlayList.splice(index, 1)
-    manageSongs(myNewPlayList)
+  const removeSong = async (id) => {
+    const res = await axios.delete(`${BASE_URL}/songs/${id}`)
+    console.log('this is detlete', res)
+    let filtered = songs.filter((song) => song._id !== id)
+    manageSongs(filtered)
   }
   const handleChange = (e) => {
     setInput(e.target.value)
@@ -55,7 +56,13 @@ const Playlist = (props) => {
         />
       </div>
       <div>
-        <RemoveSong songs={songs} removeSong={removeSong} />
+        <RemoveSong
+          {...props}
+          songs={songs}
+          handleChange={handleChange}
+          removeSong={removeSong}
+          value={input}
+        />
       </div>
     </div>
   )

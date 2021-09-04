@@ -11,9 +11,11 @@ AppRouter.get('/users/:userName', controller.userByName)
 //post request to create playlist data
 AppRouter.post('/users/:userName/playLists', controller.createPlaylist)
 
-// post  request to get create song data by id
+// post  request to get create song
 AppRouter.post('/songs', controller.createSong)
 
 AppRouter.get('/songs', controller.getAllSongs)
+
+AppRouter.delete('/songs/:id', controller.deleteSongs)
 
 module.exports = AppRouter

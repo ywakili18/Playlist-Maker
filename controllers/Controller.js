@@ -78,11 +78,26 @@ const getAllSongs = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
+const deleteSongs = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleteSong = await Song.findByIdAndDelete(id)
+
+    if (deleteSong) {
+      return res.status(200).send('song is deleted')
+    }
+    return res.status(404).send('No songs in this database')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 //controller for creating
 module.exports = {
   createUser,
   userByName,
   createPlaylist,
   createSong,
-  getAllSongs
+  getAllSongs,
+  deleteSongs
 }
