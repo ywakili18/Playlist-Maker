@@ -11,6 +11,7 @@ const Playlist = (props) => {
   const [songs, manageSongs] = useState([])
   const userName = location.state.userName
   const [input, setInput] = useState('')
+
   const addSong = (song) => {
     let myNewPlayList = [...songs, song]
     manageSongs(myNewPlayList)
@@ -32,6 +33,15 @@ const Playlist = (props) => {
     addSong(res.data)
     setInput('')
   }
+  // get song data by username request
+  useEffect(() => {
+    const getSongs = async () => {
+      const res = await axios.get(`${BASE_URL}/songs`)
+      manageSongs(res.data.songs)
+      console.log('this is managesongs', songs)
+    }
+    getSongs()
+  }, [])
 
   return (
     <div id="playlist">
