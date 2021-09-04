@@ -10,8 +10,9 @@ const AddSong = (props) => {
         onChange={props.handleChange}
         value={props.value}
       />
-
-      <button onClick={props.addSong}>+</button>
+      <button type="button" onClick={props.onClick}>
+        +
+      </button>
     </div>
   )
 }

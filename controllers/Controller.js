@@ -60,7 +60,7 @@ const createSong = async (req, res) => {
     const newSong = await Song.create(req.body)
     await newSong.save()
     if (newSong) {
-      return res.status(200).json({ newSong })
+      return res.status(200).json(newSong)
     }
     return res.status(404).send('Song not created')
   } catch (error) {

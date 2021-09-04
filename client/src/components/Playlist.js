@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import RemoveSong from './RemoveSong'
 import AddSong from './AddSong'
 import { useLocation } from 'react-router-dom'
+import axios from 'axios'
+import { BASE_URL } from '../globals'
 
 const Playlist = (props) => {
   const location = useLocation()
@@ -9,8 +11,8 @@ const Playlist = (props) => {
   const [songs, manageSongs] = useState([])
   const userName = location.state.userName
   const [input, setInput] = useState('')
-  const addSong = () => {
-    let myNewPlayList = [...songs, input]
+  const addSong = (song) => {
+    let myNewPlayList = [...songs, song]
     manageSongs(myNewPlayList)
   }
 
@@ -19,15 +21,30 @@ const Playlist = (props) => {
     myNewPlayList.splice(index, 1)
     manageSongs(myNewPlayList)
   }
-  const handleChange = (event) => {
-    event.preventDefault()
-    setInput(event.target.value)
+  const handleChange = (e) => {
+    setInput(e.target.value)
   }
+  // add song post to database
+  const onClick = async () => {
+    const newSong = { songName: input }
+    console.log(newSong)
+    const res = await axios.post(`${BASE_URL}/songs`, newSong)
+    addSong(res.data)
+    setInput('')
+  }
+
   return (
     <div id="playlist">
       <h3 id="playListName"> {`${userName} playlist`}</h3>
       <div id="songTaskContainer">
-        <AddSong handleChange={handleChange} addSong={addSong} value={input} />
+        <AddSong
+          handleChange={handleChange}
+          addSong={addSong}
+          value={input}
+          onClick={onClick}
+        />
+      </div>
+      <div>
         <RemoveSong songs={songs} removeSong={removeSong} />
       </div>
     </div>

@@ -4,8 +4,10 @@ const RemoveSong = (props) => {
     <div>
       <ul>
         {props.songs.map((song, index) => (
-          <li key={index} id="li">
-            {song} <button onClick={() => props.removeSong(index)}>-</button>
+          // data gets grabbed from db, using dot notation to grab specific key
+          <li key={song._id} id="li">
+            {song.songName}{' '}
+            <button onClick={() => props.removeSong(index)}>-</button>
           </li>
         ))}
       </ul>
