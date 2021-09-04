@@ -50,23 +50,8 @@ const createPlaylist = async (req, res) => {
     return res.status(500).json({ error: error.message })
   }
 }
-// const createSong = async (req, res) => {
-//   try {
-//     const attachedPlaylist = await Playlist.findOne({
-//       playlist_name: req.params.playlist_name
-//     })
-//     const newSongName = await Song.create(req.body)
-//     let newSonglist = [...attachedPlaylist.song, ...[newSongName.id]]
-//     attachedPlaylist.set({ song: newSonglist })
-//     await attachedPlaylist.save()
 
-//     return res.status(201).json({
-//       newSonglist
-//     })
-//   } catch (error) {
-//     return res.status(500).json({ error: error.message })
-//   }
-// }
+// controller to create song
 const createSong = async (req, res) => {
   console.log(req.body)
   try {
