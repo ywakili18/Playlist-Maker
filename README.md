@@ -12,7 +12,7 @@
 
 [LucidChart (ERD and Component Hierachy Diagram)](https://lucid.app/lucidchart/ba7c52a9-3525-409f-b9f4-a329d25ff405/edit?beaconFlowId=AE37333C3217E2DD&page=0_0#)
 
----
+## [Link to website](https://aqueous-atoll-21053.herokuapp.com/)
 
 **_Description_**
 
@@ -29,11 +29,11 @@ display a few albums/songs to get started with.
 - [x] Have a separate directory for the frontend (client) and have your backend within the main repository.
 - [x] Utlize flexbox or grid
 - [x] Include a minimum of 2 Mongoose Schemas (models)
-- [ ] Have (POST, GET, DELETE) operations
-- [ ] Display data from each model on the frontend (unless given an exemption on one by an Instructor)
+- [x] Have (POST, GET, DELETE) operations
+- [x] Display data from each model on the frontend (unless given an exemption on one by an Instructor)
 - [x] Must be able to navigate between different pages (React Router)
 - [x] Have at least 40 meaningful git commits. You should be committing your changes every time you build a new feature.
-- [ ] Deploy on Heroku
+- [x] Deploy on Heroku
 
 ---
 
